@@ -9,14 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ua.lviv.iot</groupId>
-    <artifactId>cloud_lab1</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>cloud_lab1</name>
-    <description>cloud_lab1</description>
+    <artifactId>cloud_lab</artifactId>
+    <name>cloud_lab</name>
+    <description>cloud_lab</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud-gcp.version>4.8.2</spring-cloud-gcp.version>
         <spring-cloud.version>2022.0.4</spring-cloud.version>
+            <jar.finalName>cloud_lab</jar.finalName>
     </properties>
     <dependencies>
         <dependency>
