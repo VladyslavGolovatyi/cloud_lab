@@ -1,12 +1,12 @@
 package ua.lviv.iot.dto.assembler;
 
-import ua.lviv.iot.controller.AirlineController;
-import ua.lviv.iot.domain.Airline;
-import ua.lviv.iot.dto.AirlineDto;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
+import ua.lviv.iot.controller.AirlineController;
+import ua.lviv.iot.domain.Airline;
+import ua.lviv.iot.dto.AirlineDto;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
@@ -23,8 +23,8 @@ public class AirlineDtoAssembler implements RepresentationModelAssembler<Airline
                 .build();
         Link selfLink = linkTo(methodOn(AirlineController.class).getAirline(Math.toIntExact(airlineDto.getId()))).withSelfRel();
         airlineDto.add(selfLink);
-        Link planesLink = linkTo(methodOn(AirlineController.class).getAllPlanesByAirlineId(Math.toIntExact(entity.getId()))).withRel("planes");
-        airlineDto.add(planesLink);
+        /*Link planesLink = linkTo(methodOn(AirlineController.class).getAllPlanesByAirlineId(Math.toIntExact(entity.getId()))).withRel("planes");
+        airlineDto.add(planesLink);*/
         Link airportsLink = linkTo(methodOn(AirlineController.class).getAllAirportsByAirlineId(Math.toIntExact(entity.getId()))).withRel("airports");
         airlineDto.add(airportsLink);
         return airlineDto;

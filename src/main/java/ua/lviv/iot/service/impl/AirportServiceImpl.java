@@ -1,11 +1,11 @@
 package ua.lviv.iot.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ua.lviv.iot.domain.Airport;
 import ua.lviv.iot.exception.AirportNotFoundException;
 import ua.lviv.iot.repository.AirportRepository;
 import ua.lviv.iot.service.AirportService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;

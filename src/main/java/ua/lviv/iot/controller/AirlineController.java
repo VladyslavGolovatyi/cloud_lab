@@ -69,13 +69,13 @@ public class AirlineController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping(value = "/{airlineId}/planes")
+    /*@GetMapping(value = "/{airlineId}/planes")
     public ResponseEntity<CollectionModel<PlaneDto>> getAllPlanesByAirlineId(@PathVariable Integer airlineId) {
         List<Plane> planes = airlineService.findAllPlanesByAirlineId(airlineId);
         Link selfLink = linkTo(methodOn(AirlineController.class).getAllPlanesByAirlineId(airlineId)).withSelfRel();
         CollectionModel<PlaneDto> planesDtos = planeDtoAssembler.toCollectionModel(planes, selfLink);
         return new ResponseEntity<>(planesDtos, HttpStatus.OK);
-    }
+    }*/
 
     @GetMapping(value = "/{airlineId}/airports")
     public ResponseEntity<CollectionModel<AirportDto>> getAllAirportsByAirlineId(@PathVariable Integer airlineId) {

@@ -2,10 +2,12 @@ package ua.lviv.iot.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.*;
 import org.hibernate.Hibernate;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,12 +29,12 @@ public class Airline {
     @Basic
     @Column(name = "foundation_year")
     private Integer foundationYear;
-
+/*
     @OneToMany(mappedBy = "airline")
     @ToString.Exclude
     @JsonIgnore
     private List<Plane> planes;
-
+*/
     @ManyToMany
     @JoinTable(name = "base_airports", schema = "golovatyi", joinColumns = @JoinColumn(name = "airline_id", referencedColumnName = "id", nullable = false), inverseJoinColumns = @JoinColumn(name = "airport_id", referencedColumnName = "id", nullable = false))
     @ToString.Exclude

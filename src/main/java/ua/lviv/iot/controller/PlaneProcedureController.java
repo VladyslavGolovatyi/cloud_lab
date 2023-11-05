@@ -3,11 +3,10 @@ package ua.lviv.iot.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import ua.lviv.iot.dto.PlaneDto;
-import ua.lviv.iot.dto.assembler.AirportDtoAssembler;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import ua.lviv.iot.dto.assembler.PlaneDtoAssembler;
-import ua.lviv.iot.service.AirportProcedureService;
 import ua.lviv.iot.service.PlaneProcedureService;
 
 @RestController

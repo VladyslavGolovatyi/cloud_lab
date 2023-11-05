@@ -7,9 +7,6 @@ import lombok.Getter;
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-
 @Builder
 @Getter
 @EqualsAndHashCode(callSuper = false)

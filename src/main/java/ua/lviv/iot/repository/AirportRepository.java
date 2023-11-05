@@ -1,11 +1,9 @@
 package ua.lviv.iot.repository;
 
-import org.springframework.data.jpa.repository.query.Procedure;
-import ua.lviv.iot.domain.Airport;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
+import ua.lviv.iot.domain.Airport;
 
 @Repository
 public interface AirportRepository extends JpaRepository<Airport, Integer> {

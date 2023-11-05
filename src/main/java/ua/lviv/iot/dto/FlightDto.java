@@ -6,10 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import org.springframework.hateoas.RepresentationModel;
 import org.springframework.hateoas.server.core.Relation;
-import ua.lviv.iot.domain.Airport;
-import ua.lviv.iot.domain.Plane;
-
-import javax.persistence.OneToOne;
 
 @Builder
 @Getter

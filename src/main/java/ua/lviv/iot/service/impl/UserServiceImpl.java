@@ -1,12 +1,13 @@
 package ua.lviv.iot.service.impl;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ua.lviv.iot.domain.User;
 import ua.lviv.iot.exception.UserNotFoundException;
 import ua.lviv.iot.repository.UserRepository;
 import ua.lviv.iot.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 import javax.transaction.Transactional;
 import java.util.List;
 

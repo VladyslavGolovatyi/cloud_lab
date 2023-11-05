@@ -3,7 +3,7 @@ package ua.lviv.iot.domain;
 import lombok.*;
 import org.hibernate.Hibernate;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Objects;
 
 @AllArgsConstructor

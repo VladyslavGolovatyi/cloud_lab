@@ -1,13 +1,13 @@
 
 package ua.lviv.iot.dto.assembler;
 
-import ua.lviv.iot.controller.UserController;
-import ua.lviv.iot.domain.User;
-import ua.lviv.iot.dto.UserDto;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
+import ua.lviv.iot.controller.UserController;
+import ua.lviv.iot.domain.User;
+import ua.lviv.iot.dto.UserDto;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;

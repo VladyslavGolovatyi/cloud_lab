@@ -1,28 +1,33 @@
 package ua.lviv.iot.service.impl;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import ua.lviv.iot.domain.Airline;
 import ua.lviv.iot.domain.Airport;
 import ua.lviv.iot.domain.Plane;
-import ua.lviv.iot.domain.Airline;
 import ua.lviv.iot.exception.AirlineNotFoundException;
 import ua.lviv.iot.repository.AirlineRepository;
 import ua.lviv.iot.service.AirlineService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
+@NoArgsConstructor
 public class AirlineServiceImpl implements AirlineService {
 
     @Autowired
     AirlineRepository airlineRepository;
 
+    /*
     @Override
     public List<Plane> findAllPlanesByAirlineId(Integer airlineId) {
         Airline airline = airlineRepository.findById(airlineId)
                 .orElseThrow(() -> new AirlineNotFoundException(airlineId));
         return airline.getPlanes().stream().toList();
-    }
+    }*/
 
     @Override
     public List<Airport> findBaseAirportsByAirlineId(Integer airlineId) {

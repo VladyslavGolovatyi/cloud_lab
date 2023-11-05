@@ -1,12 +1,12 @@
 package ua.lviv.iot.dto.assembler;
 
-import ua.lviv.iot.controller.FlightController;
-import ua.lviv.iot.domain.Flight;
-import ua.lviv.iot.dto.FlightDto;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
+import ua.lviv.iot.controller.FlightController;
+import ua.lviv.iot.domain.Flight;
+import ua.lviv.iot.dto.FlightDto;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;

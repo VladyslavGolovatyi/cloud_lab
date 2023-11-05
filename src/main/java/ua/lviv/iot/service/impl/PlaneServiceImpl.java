@@ -1,12 +1,12 @@
 package ua.lviv.iot.service.impl;
 
-import ua.lviv.iot.domain.Plane;
-import ua.lviv.iot.exception.PlaneNotFoundException;
-import ua.lviv.iot.repository.UserRepository;
-import ua.lviv.iot.repository.PlaneRepository;
-import ua.lviv.iot.service.PlaneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ua.lviv.iot.domain.Plane;
+import ua.lviv.iot.exception.PlaneNotFoundException;
+import ua.lviv.iot.repository.PlaneRepository;
+import ua.lviv.iot.repository.UserRepository;
+import ua.lviv.iot.service.PlaneService;
 
 import java.util.List;
 
