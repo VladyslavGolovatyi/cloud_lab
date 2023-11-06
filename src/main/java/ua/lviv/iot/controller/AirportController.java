@@ -15,7 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/airports")
 public class AirportController {
-    @Autowired
+    /*@Autowired
     private AirportService airportService;
     @Autowired
     private AirportDtoAssembler airportDtoAssembler;
@@ -51,5 +51,5 @@ public class AirportController {
     public ResponseEntity<?> deleteAirport(@PathVariable Integer airportId) {
         airportService.delete(airportId);
         return new ResponseEntity<>(HttpStatus.OK);
-    }
+    }*/
 }
