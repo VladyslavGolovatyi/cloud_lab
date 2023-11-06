@@ -62,13 +62,13 @@ public class AirlineController {
         airlineService.update(airlineId, uAirline);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
+/*
     @DeleteMapping(value = "/{airlineId}")
     public ResponseEntity<?> deleteAirline(@PathVariable Integer airlineId) {
         airlineService.delete(airlineId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
+*/
     /*@GetMapping(value = "/{airlineId}/planes")
     public ResponseEntity<CollectionModel<PlaneDto>> getAllPlanesByAirlineId(@PathVariable Integer airlineId) {
         List<Plane> planes = airlineService.findAllPlanesByAirlineId(airlineId);
