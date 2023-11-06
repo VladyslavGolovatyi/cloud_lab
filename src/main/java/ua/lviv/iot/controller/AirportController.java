@@ -15,18 +15,18 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/api/airports")
 public class AirportController {
-    /*@Autowired
+    @Autowired
     private AirportService airportService;
     @Autowired
     private AirportDtoAssembler airportDtoAssembler;
-
+/*
     @GetMapping(value = "")
     public ResponseEntity<CollectionModel<AirportDto>> getAllAirports() {
         List<Airport> airports = airportService.findAll();
         CollectionModel<AirportDto> airportDtos = airportDtoAssembler.toCollectionModel(airports);
         return new ResponseEntity<>(airportDtos, HttpStatus.OK);
     }
-
+*/
     @GetMapping(value = "/{airportId}")
     public ResponseEntity<AirportDto> getAirport(@PathVariable Integer airportId) {
         Airport airport = airportService.findById(airportId);
@@ -51,5 +51,5 @@ public class AirportController {
     public ResponseEntity<?> deleteAirport(@PathVariable Integer airportId) {
         airportService.delete(airportId);
         return new ResponseEntity<>(HttpStatus.OK);
-    }*/
+    }
 }
