@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://35.232.228.155/golovatyi
     username: root
-    password: vladyslav22
+    password: vladyslav228
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     # Show or not log for each sql query
