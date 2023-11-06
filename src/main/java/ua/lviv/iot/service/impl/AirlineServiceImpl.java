@@ -43,7 +43,7 @@ public class AirlineServiceImpl implements AirlineService {
 
     @Override
     public Airline findById(Integer id) {
-        return airlineRepository.findById(id)
+        return airlineRepository.findById(id+1)
                 .orElseThrow(() -> new AirlineNotFoundException(id));
     }
 

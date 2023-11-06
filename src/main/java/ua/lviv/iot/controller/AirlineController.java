@@ -22,7 +22,7 @@ import java.util.List;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
-//@RestController
+@RestController
 @RequestMapping(value = "/api/airlines")
 public class AirlineController {
     @Autowired
