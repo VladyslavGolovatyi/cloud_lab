@@ -17,8 +17,8 @@ public class PlaneProcedureController {
     @Autowired
     private PlaneDtoAssembler planeDtoAssembler;
 
-    @GetMapping(value = "maxPassengers")
-    public ResponseEntity<Integer> getMaxPassengers() {
+    @GetMapping(value = "maxPassengerss")
+    public ResponseEntity<Integer> getMaxPassengersForThePlane() {
         return new ResponseEntity<>(planeProcedureService.getMaxPassengers(),HttpStatus.OK);
     }
 }

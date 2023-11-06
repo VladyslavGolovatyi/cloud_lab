@@ -16,7 +16,7 @@ public class AirportProcedureController {
     private AirportDtoAssembler airportDtoAssembler;
 
     @PostMapping(value = "package")
-    public ResponseEntity<?> addTenAirports(@RequestBody String airportName) {
+    public ResponseEntity<?> addTenNewAirports(@RequestBody String airportName) {
         airportProcedureService.addTenAirports(airportName);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
