@@ -21,7 +21,7 @@ spring:
   security:
     user:
       name: vlad
-      password: passw
+      password: passwo
 
 server:
   port: 8080
