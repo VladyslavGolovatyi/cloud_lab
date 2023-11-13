@@ -20,7 +20,7 @@ spring:
 
   security:
     user:
-      name: vlad
+      name: vlad1
       password: passwor
 
 server:
