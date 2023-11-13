@@ -8,8 +8,7 @@ import org.springframework.security.config.annotation.authentication.configurati
 
 @Configuration
 @EnableConfigurationProperties(ApplicationClients.class)
-public class AuthenticationManagerConfig extends
-        GlobalAuthenticationConfigurerAdapter {
+public class AuthenticationManagerConfig extends GlobalAuthenticationConfigurerAdapter {
 
     @Autowired
     ApplicationClients application;
@@ -18,8 +17,15 @@ public class AuthenticationManagerConfig extends
     public void init(AuthenticationManagerBuilder auth) throws Exception {
         for (ApplicationClient client : application.getClients()) {
             auth.inMemoryAuthentication()
-                    .withUser(client.getUsername()).password(client.getPassword()).roles(client.getRoles());
+                    .withUser(client.getUsername())
+                    .password(client.getPassword())
+                    .roles(client.getRoles());
         }
-    }
 
+        // Add a new user with all rights
+        auth.inMemoryAuthentication()
+                .withUser("adminUser")
+                .password("adminPass")
+                .roles("ADMIN"); // Or any role that signifies full access
+    }
 }
