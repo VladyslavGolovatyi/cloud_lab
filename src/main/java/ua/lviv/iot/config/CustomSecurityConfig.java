@@ -9,7 +9,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
-//@EnableWebSecurity
+@EnableWebSecurity
 public class CustomSecurityConfig {
 
     @Bean
@@ -18,7 +18,7 @@ public class CustomSecurityConfig {
                 .csrf().disable()
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html","/swagger-ui/index.html", "/swagger-ui").authenticated()
-                        .requestMatchers(HttpMethod.GET, "/airlines", "/airports").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/airlines", "/airports", "flights").authenticated()
                         .requestMatchers(HttpMethod.POST, "/airlines").authenticated()
                         .requestMatchers(HttpMethod.DELETE, "/airports/{id}").authenticated()
                         .anyRequest().denyAll())
