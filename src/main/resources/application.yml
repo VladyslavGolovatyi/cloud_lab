@@ -18,6 +18,11 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 
+  security:
+    user:
+      name: username
+      password: password
+
 server:
   port: 8080
 
