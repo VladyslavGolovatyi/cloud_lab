@@ -17,6 +17,7 @@ public class CustomSecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests(requests -> requests
+                        .requestMatchers(HttpMethod.GET, "/swagger-ui/index.html", "/swagger-ui").authenticated()
                         .requestMatchers(HttpMethod.GET, "/airlines", "/airports").authenticated()
                         .requestMatchers(HttpMethod.POST, "/airlines").authenticated()
                         .requestMatchers(HttpMethod.DELETE, "/airports/{id}").authenticated()
